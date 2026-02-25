@@ -2,14 +2,15 @@ zerops:
   - setup: docker
     run:
       base: docker@26.1
-      # download and cache docker image
-      prepareCommands:
-        - docker image pull crccheck/hello-world
-      # start docker, --network=host needed
-      start: docker run --network=host crccheck/hello-world
 
-      # what ports docker exposes
-      # and whether it supports http traffic
+      # pull your image from GitHub Container Registry
+      prepareCommands:
+        - docker image pull ghcr.io/shashwat-coding/streamion:main
+
+      # run your container
+      start: docker run --network=host ghcr.io/shashwat-coding/streamion:main
+
+      # expose port (change if your app uses something else)
       ports:
         - port: 8000
           httpSupport: true
