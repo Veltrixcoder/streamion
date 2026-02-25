@@ -12,5 +12,5 @@ zerops:
 
       # expose port (change if your app uses something else)
       ports:
-        - port: 8000
+        - port: 7860
           httpSupport: true
