@@ -5,10 +5,10 @@ zerops:
 
       # pull your image from GitHub Container Registry
       prepareCommands:
-        - docker image pull ghcr.io/shashwat-coding/streamion:main
+        - docker image pull ghcr.io/shashwat-coding/laughing-potato:main
 
       # run your container
-      start: docker run --network=host ghcr.io/shashwat-coding/streamion:main
+      start: docker run --network=host ghcr.io/shashwat-coding/laughing-potato:main
 
       # expose port (change if your app uses something else)
       ports:
